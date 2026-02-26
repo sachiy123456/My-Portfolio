@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sachchitanand Yadav | Cybersecurity Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", system-ui, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.8;
+        }
+
+        /* HEADER */
+        header {
+            background: #111827;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-text span:first-child {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #22d3ee;
+        }
+
+        .tagline {
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background: #22d3ee;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: #111827;
+            border-radius: 14px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #1f2937;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+        }
+
+        .card h2 {
+            color: #22d3ee;
+            margin-bottom: 1rem;
+        }
+
+        /* INTRO */
+        .intro-card {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .intro-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #22d3ee;
+            object-fit: cover;
+        }
+
+        .intro-text h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-text p {
+            margin-bottom: 0.6rem;
+            color: #cbd5e1;
+        }
+
+        .badge-row {
+            margin: 0.5rem 0;
+        }
+
+        .badge {
+            background: #1e293b;
+            border: 1px solid #22d3ee;
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            margin-right: 0.4rem;
+            color: #22d3ee;
+            display: inline-block;
+            margin-bottom: 0.4rem;
+        }
+
+        /* BUTTONS */
+        .btn-row {
+            margin-top: 0.8rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            border: 1px solid #22d3ee;
+            color: #22d3ee;
+            text-decoration: none;
+            transition: 0.3s;
+            margin-right: 0.6rem;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #22d3ee;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #22d3ee;
+            color: #0f172a;
+            box-shadow: 0 0 15px #22d3ee;
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-block {
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .skill-block h3 {
+            color: #a78bfa;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-block p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        /* PROJECTS */
+        .projects-list li {
+            margin-bottom: 1rem;
+        }
+
+        .projects-list h3 {
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .projects-list p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        /* CONTACT */
+        .contact-links a {
+            color: #22d3ee;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 1rem;
+            border-top: 1px solid #1f2937;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-text">
+                <span>Sachchitanand Yadav</span>
+                <div class="tagline">Ethical Hacker · Web & Network Pentester · SOC Analyst</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ABOUT -->
+        <section id="about" class="card intro-card">
+            <img src="sachiy.jpeg" alt="Sachchitanad Yadav" />
+            <div class="intro-text">
+                <h1>Hi, I’m Sachchitanand Yadav</h1>
+                <p>
+                    B.Sc.[Cyber and Digital Science] graduate with CCNA , CHFI and CEH v13 training. Focused on Web
+                    Application
+                    & Network Penetration Testing, SOC analysis, and structured vulnerability assessment.
+                </p>
+                <p>
+                    I simulate real-world attacks in lab environments and produce professional,
+                    remediation-focused reports.
+                </p>
+
+                <div class="badge-row">
+                    <span class="badge">Web App Pentesting</span>
+                    <span class="badge">Network Pentesting</span>
+                    <span class="badge">SOC (Wazuh · Splunk)</span>
+                    <span class="badge">VAPT Reporting</span>
+                </div>
+
+                <div class="btn-row">
+                    <a href="resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
+                    <a href="#projects" class="btn">View Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="card">
+            <h2>Skills & Tools</h2>
+            <div class="skills-grid">
+
+                <div class="skill-block">
+                    <h3>Web Application Pentesting</h3>
+                    <p>Burp Suite, OWASP ZAP, Nikto, Dirsearch,</p>
+                </div>
+
+                <div class="skill-block">
+                    <h3>Network Pentesting</h3>
+                    <p>Nmap, Wireshark, Metasploit, Hydra, Netcat</p>
+                </div>
+
+                <div class="skill-block">
+                    <h3>Vulnerability Assessment</h3>
+                    <p>Nessus, OpenVAS, Acunetix</p>
+                </div>
+
+                <div class="skill-block">
+                    <h3>SOC & Log Analysis</h3>
+                    <p>Wazuh, Splunk, Windows Event Logs</p>
+                </div>
+                <div class="skill-block">
+                    <h3>Programming</h3>
+                    <p>Python, JavaScript, PHP, C, HTML, CSS</p>
+                </div>
+                <div class="skill-block">
+                    <h3>Lab Platforms</h3>
+                    <p> DVWA, Metasploitable, CEH Labs </p>
+                </div>
+                <div class="skill-block">
+                    <h3>Forensics & Analysis</h3>
+                    <p> Autopsy, FTK Imager, Wireshark </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="card">
+            <h2>Certifications & Training</h2>
+            <ul>
+                <li>✔ Cisco Certified Network Associate (CCNA) – Cisco </li>
+                <li>✔ Certified Ethical Hacker (CEH) v13 – EC-Council (Training Completed)</li>
+                <li>✔ Computer Hacking Forensic Investigator (CHFI) v11 – EC-Council (Training Completed)</li>
+                <li>✔ Certified Cyber Security Professional Program – ICTRD </li>
+                <li>✔ Hands-on Labs: DVWA, Metasploitable2, OWASP Juice Shop</li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <ul class="projects-list">
+
+                <li>
+                    <h3>Web Application VAPT (DVWA & OWASP Juice Shop)</h3>
+                    <p>Performed OWASP Top 10 testing including SQLi, XSS, Broken Auth and Access Control with full
+                        documentation and remediation.</p>
+                </li>
+
+                <li>
+                    <h3>Network Security Assessment</h3>
+                    <p>Enumerated hosts, analyzed traffic, identified weak services and misconfigurations using Nmap and
+                        Wireshark.</p>
+                </li>
+
+                <li>
+                    <h3>Metasploitable2 Exploitation Lab</h3>
+                    <p>Identified, validated, and exploited vulnerabilities in a controlled environment with structured
+                        reporting.</p>
+                </li>
+
+                <li>
+                    <h3>SOC Lab with Wazuh & Splunk</h3>
+                    <p>Detected brute-force attempts, suspicious privilege escalation, and file tampering via log
+                        correlation.</p>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>Email: sachiy123456@gmail.com</p>
+            <div class="contact-links">
+                <a href="mailto:sachiy123456@gmail.com">Email</a>
+                <a href="https://github.com/sachiy123456" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/sachiy" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Sachchitanand Yadav · Ethical Hacker | Pentester | SOC Analyst
+        <br />
+        Built & Hosted with GitHub Pages
+    </footer>
+
+</body>
+
+</html>
